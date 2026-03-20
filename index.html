@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Please Wait...</title>
+  <meta name="robots" content="noindex">
+</head>
+<body>
+  <h3>⏳ Redirecting, please wait...</h3>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const url = params.get('url');
+    if (url) {
+      setTimeout(() => {
+        window.location.href = decodeURIComponent(url);
+      }, 1500);
+    }
+  </script>
+</body>
+</html>
